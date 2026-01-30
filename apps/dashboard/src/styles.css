@@ -1,0 +1,51 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-main: #020617; /* slate-950 */
+  --bg-sidebar: rgba(15, 23, 42, 0.5); /* slate-900/50 */
+  --bg-card: rgba(30, 41, 59, 0.8); /* slate-800/80 */
+  --bg-card-hover: #1e293b; /* slate-800 */
+  --text-main: #f1f5f9; /* slate-100 */
+  --text-muted: #94a3b8; /* slate-400 */
+  --border-color: rgba(255, 255, 255, 0.05);
+  --accent-color: #6366f1; /* indigo-500 */
+}
+
+.light-theme {
+  --bg-main: #f8fafc; /* slate-50 */
+  --bg-sidebar: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --text-main: #0f172a; /* slate-900 */
+  --text-muted: #64748b; /* slate-500 */
+  --border-color: #e2e8f0; /* slate-200 */
+  --accent-color: #4f46e5; /* indigo-600 */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Custom transitions */
+.animate-in {
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+.fade-in {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
