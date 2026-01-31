@@ -418,7 +418,7 @@ MIT
 - **TailwindCSS**: Rapid UI development with custom design system
 - **NX Monorepo**: Professional-grade code organization
 
----
 
-**Built with ❤️ for the Full-Stack Coding Challenge**
+
+
 
