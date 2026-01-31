@@ -49,8 +49,10 @@ export class TasksService {
                 const task = await this.taskRepository.findOne({ where: { id, orgId: user.orgId } });
                 if (!task) return false;
 
+                // Store title before deletion for audit log
+                const taskTitle = task.title;
                 await this.taskRepository.remove(task);
-                await this.log('DELETE', user.userId, 'Task', id, `Deleted task: ${task.title}`);
+                await this.log('DELETE', user.userId, 'Task', id, `Deleted task: ${taskTitle}`);
                 return true;
         }
 
